@@ -101,7 +101,6 @@ cv2.destroyAllWindows()
 
 # The image has noticeable distortion. This is due to the drastic downsize in resolution
 # We can take a look at its new information and compare them to the original ones
-
 print("\nFor the reduced image:")
 print("Image dimensions: ", reduced_IMG.shape)
 print("Number of pixels in image: ", reduced_IMG.size)
@@ -115,9 +114,10 @@ cv2.imshow("Image with the original size", og_size_IMG)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-# We can see that even when we return to the original resolution the image is still very distorted. This happens because in the downsizing process the image lost a lot of its original information, and when we go back to the original size we interpolate on this incomplete information.
+# We can see that even when we return to the original resolution the image is still very distorted,
+#this happens because in the downsizing process the image lost a lot of its original information
+#and when we go back to the original size we interpolate on this incomplete information.
 # We can take a look at its new information and compare them to the original ones
-
 print("\nFor the upsized image:")
 print("Image dimensions: ", og_size_IMG.shape)
 print("Number of pixels in image: ", og_size_IMG.size)
