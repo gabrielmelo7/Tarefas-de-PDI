@@ -29,8 +29,6 @@ new_width = int(np.ceil(IMG.shape[1] / 10))
 
 # Now it is possible to downsize the image ten times
 reduced_IMG = NearestNeighbour.nearest_neighbour_resize(IMG, new_height, new_width)
-print(type(reduced_IMG))
-
 cv2.imshow("Downsized image", reduced_IMG)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
