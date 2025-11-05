@@ -1,6 +1,7 @@
 # Importing necessary libraries
 import numpy as np
 import cv2
+import os
 from resizing_methods.NearestNeighbour import nearest_neighbour_resize 
 
 # Reading and opening the image
@@ -60,8 +61,11 @@ print("Max value in the image: ", og_size_IMG.max())
 print("Min value in the image: ", og_size_IMG.min())
 
 # To finish things off we write and save all of these images
-cv2.imwrite("OriginalImage.png", IMG)
-cv2.imwrite("DownsizedImage.png", reduced_IMG)
-cv2.imwrite("UpsizedImage.png", og_size_IMG)
+output_path = os.path.join("./results", f"OriginalImage.png")
+cv2.imwrite(output_path, IMG)
+output_path = os.path.join("./results", f"DownsizedImage.png")
+cv2.imwrite(output_path, reduced_IMG)
+output_path = os.path.join("./results", f"UpsizedImage.png")
+cv2.imwrite(output_path, og_size_IMG)
 
 
